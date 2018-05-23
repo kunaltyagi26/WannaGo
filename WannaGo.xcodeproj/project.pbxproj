@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3CF41B20AFDEED00BA8090 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF41A20AFDEED00BA8090 /* UIViewExt.swift */; };
+		2B3CF41D20B00E1700BA8090 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF41C20B00E1700BA8090 /* UIButtonExt.swift */; };
+		2B3CF42220B03CCA00BA8090 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42020B03CCA00BA8090 /* SWRevealViewController.m */; };
+		2B3CF42420B0400E00BA8090 /* SidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42320B0400E00BA8090 /* SidePanelVC.swift */; };
+		2B3CF42620B06F7900BA8090 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42520B06F7900BA8090 /* LoginVC.swift */; };
+		2B3CF42820B5143000BA8090 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42720B5143000BA8090 /* RoundedTextField.swift */; };
+		2B5B89BF20AEAB74002F1625 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5B89BE20AEAB74002F1625 /* GradientView.swift */; };
 		2BB81DAB20AD543900A10947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB81DAA20AD543900A10947 /* AppDelegate.swift */; };
-		2BB81DAD20AD543900A10947 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB81DAC20AD543900A10947 /* ViewController.swift */; };
+		2BB81DAD20AD543900A10947 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB81DAC20AD543900A10947 /* MapVC.swift */; };
 		2BB81DB020AD543900A10947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DAE20AD543900A10947 /* Main.storyboard */; };
 		2BB81DB220AD543900A10947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DB120AD543900A10947 /* Assets.xcassets */; };
 		2BB81DB520AD543900A10947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DB320AD543900A10947 /* LaunchScreen.storyboard */; };
+		51E2F2FD45F02223B22293DF /* Pods_WannaGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FC38D204AA371044EB3171 /* Pods_WannaGo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B3CF41A20AFDEED00BA8090 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		2B3CF41C20B00E1700BA8090 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		2B3CF41F20B03CC900BA8090 /* WannaGo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WannaGo-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B3CF42020B03CCA00BA8090 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		2B3CF42120B03CCA00BA8090 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		2B3CF42320B0400E00BA8090 /* SidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelVC.swift; sourceTree = "<group>"; };
+		2B3CF42520B06F7900BA8090 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		2B3CF42720B5143000BA8090 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		2B5B89BE20AEAB74002F1625 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		2BB81DA720AD543900A10947 /* WannaGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB81DAA20AD543900A10947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2BB81DAC20AD543900A10947 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2BB81DAC20AD543900A10947 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		2BB81DAF20AD543900A10947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BB81DB120AD543900A10947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BB81DB420AD543900A10947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BB81DB620AD543900A10947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36FC38D204AA371044EB3171 /* Pods_WannaGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		439E97FCE0C8AF30B97363CE /* Pods-WannaGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo.release.xcconfig"; sourceTree = "<group>"; };
+		B2F91F24EFA66EF47DD4B4DB /* Pods-WannaGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E2F2FD45F02223B22293DF /* Pods_WannaGo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043DB4788CF44ABDE6577A14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36FC38D204AA371044EB3171 /* Pods_WannaGo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B3CF41E20B03CA600BA8090 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CF42120B03CCA00BA8090 /* SWRevealViewController.h */,
+				2B3CF42020B03CCA00BA8090 /* SWRevealViewController.m */,
+				2B3CF41F20B03CC900BA8090 /* WannaGo-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B5B89BB20AEAB46002F1625 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BB81DAC20AD543900A10947 /* MapVC.swift */,
+				2B3CF42320B0400E00BA8090 /* SidePanelVC.swift */,
+				2B3CF42520B06F7900BA8090 /* LoginVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B5B89BC20AEAB50002F1625 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B5B89BD20AEAB57002F1625 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5B89BE20AEAB74002F1625 /* GradientView.swift */,
+				2B3CF42720B5143000BA8090 /* RoundedTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5F9F8D20AFD81500BBE279 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CF41A20AFDEED00BA8090 /* UIViewExt.swift */,
+				2B3CF41C20B00E1700BA8090 /* UIButtonExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		2BB81D9E20AD543900A10947 = {
 			isa = PBXGroup;
 			children = (
 				2BB81DA920AD543900A10947 /* WannaGo */,
 				2BB81DA820AD543900A10947 /* Products */,
+				63D0CA922242ED1AF9F6F075 /* Pods */,
+				043DB4788CF44ABDE6577A14 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +130,27 @@
 		2BB81DA920AD543900A10947 /* WannaGo */ = {
 			isa = PBXGroup;
 			children = (
+				2B3CF41E20B03CA600BA8090 /* Supporting Files */,
+				2B5F9F8D20AFD81500BBE279 /* Extension */,
+				2B5B89BD20AEAB57002F1625 /* View */,
+				2B5B89BC20AEAB50002F1625 /* Model */,
+				2B5B89BB20AEAB46002F1625 /* Controller */,
 				2BB81DAA20AD543900A10947 /* AppDelegate.swift */,
-				2BB81DAC20AD543900A10947 /* ViewController.swift */,
 				2BB81DAE20AD543900A10947 /* Main.storyboard */,
 				2BB81DB120AD543900A10947 /* Assets.xcassets */,
 				2BB81DB320AD543900A10947 /* LaunchScreen.storyboard */,
 				2BB81DB620AD543900A10947 /* Info.plist */,
 			);
 			path = WannaGo;
+			sourceTree = "<group>";
+		};
+		63D0CA922242ED1AF9F6F075 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2F91F24EFA66EF47DD4B4DB /* Pods-WannaGo.debug.xcconfig */,
+				439E97FCE0C8AF30B97363CE /* Pods-WannaGo.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BB81DB920AD543900A10947 /* Build configuration list for PBXNativeTarget "WannaGo" */;
 			buildPhases = (
+				4972E2CC942997035E4BAF18 /* [CP] Check Pods Manifest.lock */,
 				2BB81DA320AD543900A10947 /* Sources */,
 				2BB81DA420AD543900A10947 /* Frameworks */,
 				2BB81DA520AD543900A10947 /* Resources */,
+				FE0CB89DEA9D7FC13EEE2E07 /* [CP] Embed Pods Frameworks */,
+				80A739CA46128646C24A1B27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +188,7 @@
 				TargetAttributes = {
 					2BB81DA620AD543900A10947 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +224,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4972E2CC942997035E4BAF18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WannaGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80A739CA46128646C24A1B27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE0CB89DEA9D7FC13EEE2E07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BB81DA320AD543900A10947 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB81DAD20AD543900A10947 /* ViewController.swift in Sources */,
+				2B3CF41B20AFDEED00BA8090 /* UIViewExt.swift in Sources */,
+				2B3CF41D20B00E1700BA8090 /* UIButtonExt.swift in Sources */,
+				2B3CF42620B06F7900BA8090 /* LoginVC.swift in Sources */,
+				2BB81DAD20AD543900A10947 /* MapVC.swift in Sources */,
 				2BB81DAB20AD543900A10947 /* AppDelegate.swift in Sources */,
+				2B5B89BF20AEAB74002F1625 /* GradientView.swift in Sources */,
+				2B3CF42420B0400E00BA8090 /* SidePanelVC.swift in Sources */,
+				2B3CF42820B5143000BA8090 /* RoundedTextField.swift in Sources */,
+				2B3CF42220B03CCA00BA8090 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +439,18 @@
 		};
 		2BB81DBA20AD543900A10947 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2F91F24EFA66EF47DD4B4DB /* Pods-WannaGo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KUZFMUE789;
 				INFOPLIST_FILE = WannaGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kunaltyagi.WannaGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WannaGo/Supporting Files/WannaGo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,14 +458,17 @@
 		};
 		2BB81DBB20AD543900A10947 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 439E97FCE0C8AF30B97363CE /* Pods-WannaGo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KUZFMUE789;
 				INFOPLIST_FILE = WannaGo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kunaltyagi.WannaGo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WannaGo/Supporting Files/WannaGo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
