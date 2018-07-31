@@ -55,7 +55,7 @@ class MapVC: UIViewController {
         requestRideBtn.setupShadowView()
         
         hamburgerBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
         hamburgerBtn.addTarget(self, action: #selector(hamburgerBtnPressed), for: .touchUpInside)
@@ -65,6 +65,7 @@ class MapVC: UIViewController {
     }
     
     @objc func hamburgerBtnPressed() {
+        
         if isExpanded == false {
             self.view.alpha = 1
         }

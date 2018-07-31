@@ -32,7 +32,6 @@ extension UIButton {
                 self.layer.add(shrinkAnim, forKey: shrinkAnim.keyPath)
             }) { (completed) in
                 if completed {
-                    spinner.frame = self.frame
                     self.layer.cornerRadius = self.frame.height / 2
                     spinner.startAnimating()
                     spinner.center = CGPoint(x: self.frame.height / 2 + 1, y: self.frame.height / 2 + 1)
