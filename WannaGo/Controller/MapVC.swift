@@ -21,6 +21,9 @@ class MapVC: UIViewController {
     @IBOutlet weak var requestRideBtn: UIButton!
     @IBOutlet weak var hamburgerBtn: UIButton!
     
+    var locationManager = CLLocationManager()
+    var currentLocation: CLLocation?
+    
     var isExpanded = true
     var revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
     
@@ -34,8 +37,17 @@ class MapVC: UIViewController {
         
         mapView.delegate = self
         
-        let camera = GMSCameraPosition.camera(withLatitude: 37.36, longitude: -122, zoom: 6.0)
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
+        let camera = GMSCameraPosition.camera(withLatitude: -33.869405, longitude: 151.199, zoom: 15.0)
         mapView.camera = camera
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.isMyLocationEnabled = true
         
         let marker = GMSMarker()
         marker.position = camera.target
@@ -95,5 +107,33 @@ class MapVC: UIViewController {
 
 extension MapVC: GMSMapViewDelegate {
     
+}
+
+extension MapVC: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations.last!
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
+        mapView.animate(to: camera)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+            case .restricted:
+                print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+        case .notDetermined:
+            print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("Error: \(error)")
+    }
 }
 

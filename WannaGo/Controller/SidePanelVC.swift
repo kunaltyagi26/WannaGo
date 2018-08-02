@@ -89,7 +89,8 @@ class SidePanelVC: UIViewController {
     @IBAction func LoginBtnPressed(_ sender: UIButton) {
         if Auth.auth().currentUser == nil {
             guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginVC") as? LoginVC else { return }
-            present(loginVC, animated: true, completion: nil)
+            revealViewController().setFront(loginVC, animated: true)
+            revealViewController().revealToggle(animated: true)
         }
         else {
             do {

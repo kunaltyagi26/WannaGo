@@ -339,9 +339,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjt-n8-kgt">
-                                        <rect key="frame" x="0.0" y="133" width="128" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="133" width="200" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="127.5" id="vys-db-WtV"/>
+                                            <constraint firstAttribute="width" constant="200" id="vys-db-WtV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -518,7 +518,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="vI9-Vs-vL2" kind="presentation" id="rrN-xX-uyJ"/>
+                                                        <action selector="signUpPressed:" destination="8M4-xf-JqK" eventType="touchUpInside" id="LDp-ni-3bh"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -578,7 +578,7 @@
         <!--RegisterVC-->
         <scene sceneID="RZb-fB-bJ7">
             <objects>
-                <viewController id="vI9-Vs-vL2" customClass="RegisterVC" customModule="WannaGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registerVC" id="vI9-Vs-vL2" customClass="RegisterVC" customModule="WannaGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Las-OU-uAE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

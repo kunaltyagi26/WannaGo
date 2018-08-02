@@ -47,6 +47,11 @@ class LoginVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        guard let registerVC = storyboard?.instantiateViewController(withIdentifier: "registerVC") as? RegisterVC else { return }
+        revealViewController().setFront(registerVC, animated: true)
+    }
+    
     @IBAction func loginBtnPressed(_ sender: UIButton) {
         if loginTxt.text != nil && passwordTxt.text != nil {
             UIView.animate(withDuration: 0.2, animations: {

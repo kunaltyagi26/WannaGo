@@ -70,12 +70,8 @@ class RegisterVC: UIViewController {
             
             AuthService.instance.registerUser(email, password, isDriver: isDriver, completion: { (status, error) in
                 if error == nil {
-                    
-                  //self.revealViewController().pushFrontViewController(self.revealViewController().frontViewController, animated: true)
-                    
-                    //self.revealViewController().setFrontViewPosition(.left, animated: true)
-                    
-                    self.dismiss(animated: true, completion: nil)
+                    guard let mapVC = self.storyboard?.instantiateViewController(withIdentifier: "mapVC") as? MapVC else { return }
+                    self.revealViewController().setFront(mapVC, animated: true)
                 }
                 else {
                     guard let errorCode = AuthErrorCode(rawValue: error!._code) else { return }

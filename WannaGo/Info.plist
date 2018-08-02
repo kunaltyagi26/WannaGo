@@ -48,5 +48,11 @@
 		<string>googlechromes</string>
 		<string>comgooglemaps</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>WannaGo needs to know yuor location so that our drivers can find you.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>WannaGo needs to know yuor location so that our drivers can find you.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>WannaGo needs to know yuor location so that our drivers can find you.</string>
 </dict>
 </plist>
