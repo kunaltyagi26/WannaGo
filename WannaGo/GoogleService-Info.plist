@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>707190738763-oavvg0b2jp4qiu63d8meqls4fcgjmpm3.apps.googleusercontent.com</string>
+	<string>1082426894258-hqgprpi62b4napnvv2mn11j2l9an6o7f.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.707190738763-oavvg0b2jp4qiu63d8meqls4fcgjmpm3</string>
+	<string>com.googleusercontent.apps.1082426894258-hqgprpi62b4napnvv2mn11j2l9an6o7f</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD-7lijCW1q9P7g15TAvqo3mF7_0QixYOM</string>
+	<string>AIzaSyBqCAer-Q6W7eqyYK8W6DisDuoW7XfXeEw</string>
 	<key>GCM_SENDER_ID</key>
-	<string>707190738763</string>
+	<string>1082426894258</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.kunaltyagi.WannaGo</string>
 	<key>PROJECT_ID</key>
-	<string>wannago-1526537519057</string>
+	<string>wannago-d0025</string>
 	<key>STORAGE_BUCKET</key>
-	<string>wannago-1526537519057.appspot.com</string>
+	<string>wannago-d0025.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:707190738763:ios:ceeefb95845355b9</string>
+	<string>1:1082426894258:ios:ceeefb95845355b9</string>
 	<key>DATABASE_URL</key>
-	<string>https://wannago-1526537519057.firebaseio.com</string>
+	<string>https://wannago-d0025.firebaseio.com</string>
 </dict>
 </plist>

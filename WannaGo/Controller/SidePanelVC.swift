@@ -18,6 +18,9 @@ class SidePanelVC: UIViewController {
     @IBOutlet weak var pickupMode: UISwitch!
     @IBOutlet weak var pickupModeLabel: UILabel!
     
+    let currentId = Auth.auth().currentUser?.uid
+    let appDelegate = AppDelegate.getAppDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,4 +107,14 @@ class SidePanelVC: UIViewController {
         }
     }
     
+    @IBAction func switchToggled(_ sender: UISwitch) {
+        if sender.isOn {
+            pickupModeLabel.text = "Pickup Mode Enabled"
+            DataService.instance.REF_DRIVERS.child(currentId!).updateChildValues(["isUserPickupEnabled": true])
+        }
+        else {
+            pickupModeLabel.text = "Pickup Mode Disabled"
+            DataService.instance.REF_DRIVERS.child(currentId!).updateChildValues(["isUserPickupEnabled": false])
+        }
+    }
 }

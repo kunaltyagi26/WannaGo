@@ -20,6 +20,7 @@ class AuthService {
             }
             else {
                 guard let user = user else { return }
+                print("User is:", user.user.uid)
                 var userData: [String: Any]
                 
                 if isDriver == false {
@@ -39,6 +40,9 @@ class AuthService {
     func loginUser(_ email: String, _ password: String, completion: @escaping (_ status: Bool, _ error: Error?)-> ()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error != nil {
+                print("Username:", email)
+                print("Password:", password)
+                print("User is:", user)
                 completion(false, error)
                 return
             }

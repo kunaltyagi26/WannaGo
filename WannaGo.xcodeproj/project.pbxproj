@@ -14,7 +14,6 @@
 		2B3CF42620B06F7900BA8090 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42520B06F7900BA8090 /* LoginVC.swift */; };
 		2B3CF42820B5143000BA8090 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CF42720B5143000BA8090 /* RoundedTextField.swift */; };
 		2B5B89BF20AEAB74002F1625 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5B89BE20AEAB74002F1625 /* GradientView.swift */; };
-		2B7FD71220E0CB7900743C25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B7FD71120E0CB7900743C25 /* GoogleService-Info.plist */; };
 		2B7FD71520E0CD7D00743C25 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7FD71420E0CD7D00743C25 /* DataService.swift */; };
 		2B7FD71720E0F58E00743C25 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7FD71620E0F58E00743C25 /* AuthService.swift */; };
 		2B7FD71920E10D1D00743C25 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7FD71820E10D1D00743C25 /* RegisterVC.swift */; };
@@ -23,6 +22,7 @@
 		2BB81DB020AD543900A10947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DAE20AD543900A10947 /* Main.storyboard */; };
 		2BB81DB220AD543900A10947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DB120AD543900A10947 /* Assets.xcassets */; };
 		2BB81DB520AD543900A10947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BB81DB320AD543900A10947 /* LaunchScreen.storyboard */; };
+		2BD9BBEB211166730092E0ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BD9BBEA211166730092E0ED /* GoogleService-Info.plist */; };
 		51E2F2FD45F02223B22293DF /* Pods_WannaGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FC38D204AA371044EB3171 /* Pods_WannaGo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,6 @@
 		2B3CF42520B06F7900BA8090 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2B3CF42720B5143000BA8090 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		2B5B89BE20AEAB74002F1625 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		2B7FD71120E0CB7900743C25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B7FD71420E0CD7D00743C25 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		2B7FD71620E0F58E00743C25 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2B7FD71820E10D1D00743C25 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		2BB81DB120AD543900A10947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BB81DB420AD543900A10947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BB81DB620AD543900A10947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD9BBEA211166730092E0ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		36FC38D204AA371044EB3171 /* Pods_WannaGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WannaGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		439E97FCE0C8AF30B97363CE /* Pods-WannaGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaGo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo.release.xcconfig"; sourceTree = "<group>"; };
 		B2F91F24EFA66EF47DD4B4DB /* Pods-WannaGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WannaGo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WannaGo/Pods-WannaGo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				2BB81DB120AD543900A10947 /* Assets.xcassets */,
 				2BB81DB320AD543900A10947 /* LaunchScreen.storyboard */,
 				2BB81DB620AD543900A10947 /* Info.plist */,
-				2B7FD71120E0CB7900743C25 /* GoogleService-Info.plist */,
+				2BD9BBEA211166730092E0ED /* GoogleService-Info.plist */,
 			);
 			path = WannaGo;
 			sourceTree = "<group>";
@@ -237,7 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB81DB520AD543900A10947 /* LaunchScreen.storyboard in Resources */,
-				2B7FD71220E0CB7900743C25 /* GoogleService-Info.plist in Resources */,
+				2BD9BBEB211166730092E0ED /* GoogleService-Info.plist in Resources */,
 				2BB81DB220AD543900A10947 /* Assets.xcassets in Resources */,
 				2BB81DB020AD543900A10947 /* Main.storyboard in Resources */,
 			);
