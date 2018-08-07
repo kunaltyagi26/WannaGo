@@ -41,7 +41,8 @@ class RegisterVC: UIViewController {
     }
     
     @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "loginVC") as? LoginVC else { return }
+        revealViewController().setFront(loginVC, animated: true)
     }
     
     @IBAction func signUpPressed(_ sender: UIButton) {

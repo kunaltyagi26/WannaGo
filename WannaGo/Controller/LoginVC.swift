@@ -44,7 +44,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        guard let mapVC = storyboard?.instantiateViewController(withIdentifier: "mapVC") as? MapVC else { return }
+        revealViewController().setFront(mapVC, animated: true)
     }
     
     @IBAction func signUpPressed(_ sender: UIButton) {

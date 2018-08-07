@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import RevealingSplashView
+import Firebase
 
 class MapVC: UIViewController {
 
@@ -23,6 +24,9 @@ class MapVC: UIViewController {
     
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
+    var markers: [DriverAnnotation]?
+
+    var zoomLevel: Float = 15.0
     
     var isExpanded = true
     var revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "launchScreenIcon")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: .white)
@@ -36,24 +40,23 @@ class MapVC: UIViewController {
         revealingSplashView.heartAttack = true
         
         mapView.delegate = self
-        
+
         locationManager = CLLocationManager()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.distanceFilter = 50
-        locationManager.startUpdatingLocation()
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        checkLocationAuthStatus()
         
-        let camera = GMSCameraPosition.camera(withLatitude: -33.869405, longitude: 151.199, zoom: 15.0)
+        let camera = GMSCameraPosition.camera(withLatitude: -33.869405, longitude: 151.199, zoom: zoomLevel)
         mapView.camera = camera
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
-        let marker = GMSMarker()
-        marker.position = camera.target
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        /*marker.position = camera.target
+        marker.groundAnchor = CGPoint(x: 0.5, y: 0.5)
+        marker.icon = UIImage(named: "driverAnnotation")
+        marker.appearAnimation = .pop*/
+        //marker.map = mapView
+        
+        loadDriverAnnotation()
         
         userImageView.setupCircularView()
         sourceLocationDot.setupCircularView()
@@ -103,15 +106,78 @@ class MapVC: UIViewController {
         }
     }
     
+    @IBAction func centreMapBtnPressed(_ sender: UIButton) {
+        let camera = GMSCameraPosition.camera(withLatitude: (currentLocation?.coordinate.latitude)!, longitude: (currentLocation?.coordinate.longitude)!, zoom: zoomLevel)
+        mapView.animate(to: camera)
+    }
+    
+    func checkLocationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedAlways {
+            locationManager.distanceFilter = 0
+            locationManager.startUpdatingLocation()
+        }
+        else {
+            locationManager.requestAlwaysAuthorization()
+        }
+    }
+    
+    func loadDriverAnnotation() {
+        DataService.instance.REF_DRIVERS.observeSingleEvent(of: .value) { (driverSnapshot) in
+            guard let driverSnapshot = driverSnapshot.children.allObjects as? [DataSnapshot] else { return }
+            for driver in driverSnapshot {
+                if driver.hasChild("coordinate") {
+                    if driver.childSnapshot(forPath: "isUserPickupEnabled").value as? Bool == true {
+                        guard let driverDict = driver.value as? Dictionary<String, AnyObject> else { return }
+                        let coordinateArray = driverDict["coordinate"] as! NSArray
+                        let driverCoordinate = CLLocationCoordinate2D(latitude: coordinateArray[0] as! CLLocationDegrees, longitude: coordinateArray[1] as! CLLocationDegrees)
+                        
+                        print(driverCoordinate)
+                        
+                        let annotation = DriverAnnotation(coordinate: driverCoordinate, withKey: driver.key)
+                        annotation.position = driverCoordinate
+                        annotation.groundAnchor = CGPoint(x: 0.5, y: 0.5)
+                        annotation.icon = UIImage(named: "driverAnnotation")
+                        annotation.appearAnimation = .pop
+                        annotation.map = self.mapView
+                        self.markers?.append(annotation)
+                        
+                        var isDriverVisible: Bool {
+                            var status: Bool = false
+                            for marker in self.markers! {
+                                if marker.key == annotation.key {
+                                    marker.update(annotationPosition: marker, withCoordinate: driverCoordinate)
+                                    status = true
+                                    return status
+                                }
+                                else {
+                                    status = false
+                                }
+                            }
+                            return status
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 extension MapVC: GMSMapViewDelegate {
-    
 }
 
 extension MapVC: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
+        
+        UpdateService.instance.updateUserLocation(withCoordinate: location.coordinate)
+        UpdateService.instance.updateDriverLocation(withCoordinate: location.coordinate)
+        
+        //marker.position = location.coordinate
+        //marker.map = mapView
+        
+        currentLocation = location
+        //print("Set to:", currentLocation)
         
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 15.0)
         mapView.animate(to: camera)
@@ -125,7 +191,8 @@ extension MapVC: CLLocationManagerDelegate {
             print("User denied access to location.")
         case .notDetermined:
             print("Location status not determined.")
-        case .authorizedAlways: fallthrough
+        case .authorizedAlways:
+            fallthrough
         case .authorizedWhenInUse:
             print("Location status is OK.")
         }

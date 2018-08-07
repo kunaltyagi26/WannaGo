@@ -27,7 +27,7 @@ class AuthService {
                     userData = ["email": user.user.email, "isDriver": false] as [String: Any]
                 }
                 else {
-                    userData = ["email": user.user.email, "isDriver": true, "isUserPickupEnabled": false, "driverIsOnTrip": false] as [String: Any]
+                    userData = ["email": user.user.email, "isDriver": true, "isUserPickupEnabled": true, "driverIsOnTrip": false] as [String: Any]
                 }
                 
                 DataService.instance.createUser(user.user.uid, userData, isDriver)
